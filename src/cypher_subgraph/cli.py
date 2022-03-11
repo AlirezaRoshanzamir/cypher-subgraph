@@ -16,7 +16,7 @@ def cypher_subgraph() -> None:
 
 @cypher_subgraph.command(
     short_help='Rewrite the query read from standard input that the query '
-    'returne values become the member of the specified "subgraph" argument.'
+    'returned values become the member of the specified "subgraph" argument.'
 )
 @click.argument('subgraph', type=str)
 def add_to(subgraph: str) -> None:
