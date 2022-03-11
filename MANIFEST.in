@@ -1,0 +1,4 @@
+include LICENSE README.md
+recursive-include src/cypher_subgraph py.typed
+global-exclude __pycache__
+global-exclude *.py[co]
