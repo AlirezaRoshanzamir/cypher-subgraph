@@ -11,11 +11,13 @@ def setup() -> None:
     setuptools.setup(
         name='cypher-subgraph',
         version='0.1.0',
-        description='...',
+        description='A python library and CLI tool that rewrites and '
+                    'generates cypher queries for supporting sub-graph.',
         long_description=readme,
         author='Alireza Roshanzamir',
         author_email='a.roshanzamir1996@gmail.com',
-        url='...',
+        url='https://github.com/AlirezaRoshanzamir/'
+            'cypher-subgraph/tree/main/src/cypher_subgraph',
         license=license,
         include_package_data=True,
         install_requires=[
