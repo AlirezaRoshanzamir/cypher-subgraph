@@ -1,12 +1,12 @@
 PYTHON = pyauto
 
-develop check_type test:
+develop check_types test:
 	tox -e $(PYTHON)-$@
 
-lint fix_lint:
+lint fix_lint distribute:
 	tox -e $@
 
-compile_cypher_grammar:
+compile_cypher_grammar: ensure_antlr4
 	antlr4 \
 		-Dlanguage=Python3 \
 		-no-listener \
@@ -25,3 +25,6 @@ clean:
 	rm -rf build
 	rm -rf dist
 	rm -rf .tox
+
+ensure_antlr4:
+	sudo apt-get install antlr4=4.7.2*

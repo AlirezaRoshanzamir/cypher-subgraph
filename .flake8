@@ -1,0 +1,36 @@
+[flake8]
+per-file-ignores =
+    **/__init__.py:F401
+
+extend-ignore = 
+    D100, D101, D102, D103, D104, D105, D106, D107, D200, D301, ANN001, ANN101, ANN102
+
+class-attributes-order =
+    meta_class,
+    nested_class,
+    field,
+    __init__,
+    __new__,
+    __post_init__,
+    property_method,
+    static_method,
+    class_method,
+    method,
+    magic_method,
+    private_static_method,
+    private_class_method,
+    private_method
+
+exclude =
+    .git,
+    __pycache__,
+    old,
+    build,
+    dist,
+    *pyenv*,
+    venv,
+    env,
+    .tox,
+    virtualenv,
+    conftest.py,
+    generated

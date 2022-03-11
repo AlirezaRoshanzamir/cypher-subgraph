@@ -14,6 +14,7 @@ def setup() -> None:
         description='A python library and CLI tool that rewrites and '
                     'generates cypher queries for supporting sub-graph.',
         long_description=readme,
+        long_description_content_type='text/markdown',
         author='Alireza Roshanzamir',
         author_email='a.roshanzamir1996@gmail.com',
         url='https://github.com/AlirezaRoshanzamir/'
@@ -25,7 +26,9 @@ def setup() -> None:
             'click>=8.0.4,<9'
         ],
         entry_points={
-            'console_scripts': ['cypher-subgraph = cypher_subgraph.cli:cli']
+            'console_scripts': [
+                'cypher-subgraph = cypher_subgraph.cli:cypher_subgraph'
+            ]
         },
         package_dir={'': 'src'},
         packages=setuptools.find_packages('src'),
