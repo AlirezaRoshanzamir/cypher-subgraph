@@ -10,7 +10,7 @@ def setup() -> None:
 
     setuptools.setup(
         name='cypher-subgraph',
-        version='0.1.0',
+        version='0.1.1',
         description='A python library and CLI tool that rewrites and '
                     'generates cypher queries for supporting sub-graph.',
         long_description=readme,
