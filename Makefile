@@ -1,9 +1,9 @@
 PYTHON = pyauto
 
-develop check_types test:
+develop check_types test: compile_cypher_grammar
 	tox -e $(PYTHON)-$@
 
-lint fix_lint distribute:
+lint fix_lint distribute: compile_cypher_grammar
 	tox -e $@
 
 compile_cypher_grammar: ensure_antlr4
@@ -21,6 +21,7 @@ clean:
 	find . -type d -name ".pytest_cache" -exec rm -rf {} +
 	find . -type d -name "__pycache__" -exec rm -rf {} +
 	find . -type d -name "*.egg-info" -exec rm -rf {} +
+	find . -type d -name "generated" -exec rm -rf {} +
 	rm -rf *.egg-info
 	rm -rf build
 	rm -rf dist
